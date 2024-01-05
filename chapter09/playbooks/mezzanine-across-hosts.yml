@@ -19,7 +19,7 @@
   roles:
     - role: mezzanine
       tags: mezzanine
-      database_host: "{{ hostvars.db.ansible_enp0s8.ipv4.address }}"
+      database_host: "{{ hostvars.db.ansible_eth1.ipv4.address }}"
     - role: nginx
       tags: nginx
 ...

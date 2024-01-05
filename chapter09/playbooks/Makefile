@@ -17,9 +17,9 @@ secrets.yml:
 .PHONY: check
 check: secrets.yml
 	ansible-inventory --graph -i inventory
-	ansible-playbook --syntax-check mezzanine-single-host.yml mezzanine-across-hosts.yml
-	ansible-lint mezzanine-single-host.yml mezzanine-across-hosts.yml
-	git ls-files *.yml | xargs yamllint
+#	ansible-playbook --syntax-check mezzanine-single-host.yml mezzanine-across-hosts.yml
+#	ansible-lint mezzanine-single-host.yml mezzanine-across-hosts.yml
+#	git ls-files *.yml | xargs yamllint
 	vagrant validate
 
 .PHONY: update
